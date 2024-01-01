@@ -1,0 +1,125 @@
+<html>
+<head>
+<link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+	<title> table</title>
+	<style>
+	  body{
+	       background-color:black;
+		   margin:250px250px;
+		   color:white;
+		   font-family:chiller;
+		    color:red;
+			
+	      }
+	.black{
+	      background-color:white;
+		  box-shadow:-8px -10px 10px pink,7px 10px 10px red;
+		 
+	     }
+		 td{
+		 border:2px solid gold;
+		 font-size:50px;
+		  width:70px;
+		  height:70px;
+		 }
+	</style>
+</head>
+<body>
+<table border>
+<tr>
+<td class="black"><i class="fa-solid fa-chess-rook"></i></td>
+<td><i class="fa-solid fa-chess-knight"></i></td>
+<td class="black"><i class="fa-regular fa-chess-bishop"></i></td>
+<td><i class="fa-regular fa-chess-queen"></i></td>
+<td class="black"><i class="fa-regular fa-chess-king"></i></td>
+<td><i class="fa-solid fa-chess-bishop"></i></td>
+<td class="black"><i class="fa-regular fa-chess-knight"></i></td>
+<td><i class="fa-regular fa-chess-rook"></i></td>
+</tr>
+<tr>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+</tr>
+<tr>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+</tr>
+<tr>
+<td class="white"></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+</tr>
+<tr>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+<td></td>
+<td class="black"></td>
+</tr>
+<tr>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn"></i></td>
+<td><i class="fa-regular fa-chess-pawn"></i></td>
+<td class="black"><i class="fa-regular fa-chess-pawn" onclick="move_pawn()"></i></td>
+<td><i class="fa-regular fa-chess-pawn" onclick="move_pawn()"></i></td>
+</tr>
+<tr>
+<td><i class="fa-solid fa-chess-rook"></i></td>
+<td class="black"><i class="fa-solid fa-chess-knight"></i></td>
+<td><i class="fa-regular fa-chess-bishop"></i></td>
+<td class="black"><i class="fa-regular fa-chess-queen"></i></td>
+<td><i class="fa-regular fa-chess-king"></i></td>
+<td class="black"><i class="fa-solid fa-chess-bishop"></i></td>
+<td><i class="fa-regular fa-chess-knight"></i></td>
+<td class="black"><i class="fa-regular fa-chess-rook"></i></td>
+</table>
+
+<script>
+   function move_pawn(){
+    let td = document.getElementsByTagName("td");
+	console.log(td);
+	console.log(td[55].innerHTML);
+	td[47].innerHTML=td[55].innerHTML;
+	td[55].innerHTML='';
+	
+	console.log(td);
+	console.log(td[54].innerHTML);
+	td[46].innerHTML=td[54].innerHTML;
+	td[54].innerHTML='';
+   }
+</script>
+</body>
+</html>
